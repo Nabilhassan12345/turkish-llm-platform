@@ -1,0 +1,216 @@
+sectors:
+  finance_banking:
+    name: "Finans ve Bankacılık"
+    description: "Bankacılık, finansal hizmetler, yatırım ve para yönetimi"
+    keywords: ["banka", "kredi", "finans", "yatırım", "para", "döviz", "borsa", "portföy", "faiz", "kredi kartı", "mevduat", "kredi notu"]
+    adapter_path: "adapters/finance_banking_adapter"
+    priority: 1
+    expertise_domains: ["kredi analizi", "risk yönetimi", "portföy optimizasyonu", "finansal planlama", "yatırım danışmanlığı"]
+    confidence_threshold: 0.8
+    
+  healthcare:
+    name: "Sağlık"
+    description: "Tıp, eczacılık, hastane yönetimi ve sağlık hizmetleri"
+    keywords: ["hastane", "doktor", "ilaç", "tedavi", "sağlık", "tıp", "eczane", "muayene", "ameliyat", "klinik", "laboratuvar", "radyoloji"]
+    adapter_path: "adapters/healthcare_adapter"
+    priority: 2
+    expertise_domains: ["hasta bakımı", "tedavi planlaması", "ilaç yönetimi", "sağlık güvenliği", "klinik araştırma"]
+    confidence_threshold: 0.85
+    
+  education:
+    name: "Eğitim"
+    description: "Okul, üniversite, kurs ve eğitim hizmetleri"
+    keywords: ["okul", "üniversite", "kurs", "eğitim", "öğretmen", "öğrenci", "ders", "sınav", "akademi", "seminer", "workshop", "eğitmen"]
+    adapter_path: "adapters/education_adapter"
+    priority: 3
+    expertise_domains: ["müfredat geliştirme", "öğrenci değerlendirmesi", "eğitim teknolojisi", "akademik danışmanlık", "sertifika programları"]
+    confidence_threshold: 0.8
+    
+  media_publishing:
+    name: "Medya ve Yayıncılık"
+    description: "Gazete, dergi, televizyon, radyo ve dijital medya"
+    keywords: ["gazete", "dergi", "televizyon", "radyo", "medya", "yayın", "haber", "reporter", "editör", "muhabir", "yayıncılık", "dijital medya"]
+    adapter_path: "adapters/media_publishing_adapter"
+    priority: 4
+    expertise_domains: ["içerik üretimi", "haber analizi", "dijital pazarlama", "medya etiği", "yayın stratejisi"]
+    confidence_threshold: 0.75
+    
+  legal:
+    name: "Hukuk"
+    description: "Avukatlık, hukuki danışmanlık ve yasal hizmetler"
+    keywords: ["avukat", "hukuk", "mahkeme", "dava", "yasa", "kanun", "hukuki", "noter", "sözleşme", "anlaşma", "hak", "adalet"]
+    adapter_path: "adapters/legal_adapter"
+    priority: 5
+    expertise_domains: ["sözleşme hazırlama", "dava yönetimi", "hukuki araştırma", "uyum danışmanlığı", "arabuluculuk"]
+    confidence_threshold: 0.9
+    
+  public_administration:
+    name: "Kamu Yönetimi"
+    description: "Devlet kurumları, belediye ve kamu hizmetleri"
+    keywords: ["devlet", "kamu", "belediye", "valilik", "kaymakamlık", "bakanlık", "müdürlük", "memur", "kamu hizmeti", "resmi", "devlet kurumu"]
+    adapter_path: "adapters/public_administration_adapter"
+    priority: 6
+    expertise_domains: ["kamu politikası", "hizmet standartları", "şeffaflık", "vatandaş memnuniyeti", "kamu maliyesi"]
+    confidence_threshold: 0.8
+    
+  manufacturing:
+    name: "İmalat Endüstrisi"
+    description: "Fabrika, endüstriyel üretim ve imalat süreçleri"
+    keywords: ["fabrika", "üretim", "imalat", "makine", "endüstri", "kalite", "süreç", "üretim hattı", "montaj", "imalatçı", "sanayi"]
+    adapter_path: "adapters/manufacturing_adapter"
+    priority: 7
+    expertise_domains: ["üretim planlaması", "kalite kontrol", "bakım yönetimi", "tedarik zinciri", "süreç optimizasyonu"]
+    confidence_threshold: 0.8
+    
+  asset_tracking:
+    name: "Varlık Takibi"
+    description: "Varlık yönetimi, envanter takibi ve stok kontrolü"
+    keywords: ["varlık", "envanter", "stok", "takip", "barkod", "rfid", "depo", "warehouse", "inventory", "asset", "varlık yönetimi"]
+    adapter_path: "adapters/asset_tracking_adapter"
+    priority: 8
+    expertise_domains: ["envanter optimizasyonu", "varlık yaşam döngüsü", "stok yönetimi", "depo operasyonları", "varlık değerleme"]
+    confidence_threshold: 0.75
+    
+  insurance:
+    name: "Sigortacılık"
+    description: "Sigorta şirketleri, poliçe ve risk yönetimi"
+    keywords: ["sigorta", "poliçe", "risk", "teminat", "hasar", "sigorta şirketi", "broker", "aktüer", "sigortalı", "tazminat", "güvence"]
+    adapter_path: "adapters/insurance_adapter"
+    priority: 9
+    expertise_domains: ["risk değerlendirmesi", "poliçe yönetimi", "hasar tespiti", "aktüeryal hesaplamalar", "sigorta ürünleri"]
+    confidence_threshold: 0.85
+    
+  tourism_hospitality:
+    name: "Turizm ve Otelcilik"
+    description: "Otel, restoran, seyahat ve turizm hizmetleri"
+    keywords: ["otel", "turizm", "seyahat", "restoran", "rezervasyon", "tatil", "tur", "misafir", "konaklama", "catering", "turist", "seyahat acentesi"]
+    adapter_path: "adapters/tourism_hospitality_adapter"
+    priority: 10
+    expertise_domains: ["müşteri hizmetleri", "rezervasyon yönetimi", "tur planlaması", "otel operasyonları", "misafir deneyimi"]
+    confidence_threshold: 0.8
+    
+  ecommerce:
+    name: "E-ticaret"
+    description: "Online alışveriş, e-ticaret platformları ve dijital satış"
+    keywords: ["e-ticaret", "online", "alışveriş", "ecommerce", "marketplace", "satış", "ürün", "sepet", "ödeme", "kargo", "teslimat", "dijital satış"]
+    adapter_path: "adapters/ecommerce_adapter"
+    priority: 11
+    expertise_domains: ["online satış stratejisi", "müşteri deneyimi", "ödeme sistemleri", "lojistik yönetimi", "dijital pazarlama"]
+    confidence_threshold: 0.8
+    
+  energy:
+    name: "Enerji"
+    description: "Enerji üretimi, dağıtımı ve enerji yönetimi"
+    keywords: ["enerji", "elektrik", "doğalgaz", "petrol", "yenilenebilir", "güneş", "rüzgar", "hidroelektrik", "enerji üretimi", "dağıtım", "enerji yönetimi"]
+    adapter_path: "adapters/energy_adapter"
+    priority: 12
+    expertise_domains: ["enerji verimliliği", "yenilenebilir enerji", "şebeke yönetimi", "enerji depolama", "sürdürülebilir enerji"]
+    confidence_threshold: 0.8
+    
+  energy_distribution:
+    name: "Enerji Üretimi, Dağıtımı ve İletimi"
+    description: "Enerji şebekesi, iletim hatları ve dağıtım sistemleri"
+    keywords: ["şebeke", "iletim", "dağıtım", "enerji şebekesi", "yüksek gerilim", "trafo", "elektrik dağıtımı", "enerji iletimi", "şebeke yönetimi"]
+    adapter_path: "adapters/energy_distribution_adapter"
+    priority: 13
+    expertise_domains: ["şebeke güvenilirliği", "yük dengeleme", "arıza yönetimi", "enerji kalitesi", "akıllı şebeke"]
+    confidence_threshold: 0.85
+    
+  agriculture:
+    name: "Tarım"
+    description: "Çiftçilik, tarımsal üretim ve gıda güvenliği"
+    keywords: ["tarım", "çiftçi", "çiftlik", "ekin", "hasat", "gıda", "organik", "pestisit", "sulama", "tarımsal üretim", "çiftçilik", "gıda güvenliği"]
+    adapter_path: "adapters/agriculture_adapter"
+    priority: 14
+    expertise_domains: ["sürdürülebilir tarım", "hassas tarım", "gıda güvenliği", "toprak yönetimi", "iklim adaptasyonu"]
+    confidence_threshold: 0.8
+    
+  transportation:
+    name: "Ulaştırma ve Lojistik"
+    description: "Kara, deniz, hava ve demiryolu taşımacılığı"
+    keywords: ["ulaştırma", "taşımacılık", "lojistik", "kargo", "nakliye", "filo", "rota", "teslimat", "trafik", "ulaşım", "seyahat", "mobilite"]
+    adapter_path: "adapters/transportation_adapter"
+    priority: 15
+    expertise_domains: ["rota optimizasyonu", "filo yönetimi", "tedarik zinciri", "trafik yönetimi", "sürdürülebilir ulaşım"]
+    confidence_threshold: 0.8
+    
+  construction:
+    name: "İnşaat ve Yapı"
+    description: "Bina, altyapı ve inşaat projeleri"
+    keywords: ["inşaat", "yapı", "mimari", "müteahhit", "proje", "şantiye", "malzeme", "teknik çizim", "yapı denetimi", "mimarlık", "mühendislik"]
+    adapter_path: "adapters/construction_adapter"
+    priority: 16
+    expertise_domains: ["proje yönetimi", "maliyet kontrolü", "kalite güvencesi", "güvenlik yönetimi", "sürdürülebilir yapı"]
+    confidence_threshold: 0.8
+    
+  real_estate:
+    name: "Gayrimenkul"
+    description: "Emlak, gayrimenkul yatırımı ve kiralama hizmetleri"
+    keywords: ["gayrimenkul", "emlak", "ev", "daire", "kiralama", "satış", "değerleme", "emlakçı", "tapu", "kat karşılığı", "konut", "ticari gayrimenkul"]
+    adapter_path: "adapters/real_estate_adapter"
+    priority: 17
+    expertise_domains: ["gayrimenkul değerleme", "pazar analizi", "yatırım danışmanlığı", "kiralama yönetimi", "emlak hukuku"]
+    confidence_threshold: 0.8
+    
+  telecommunications:
+    name: "Telekomünikasyon"
+    description: "İletişim teknolojileri, internet ve mobil hizmetler"
+    keywords: ["telekomünikasyon", "internet", "mobil", "telefon", "iletişim", "ağ", "veri", "broadband", "5g", "fiber", "uydu", "iletişim teknolojisi"]
+    adapter_path: "adapters/telecommunications_adapter"
+    priority: 18
+    expertise_domains: ["ağ altyapısı", "mobil teknolojiler", "veri güvenliği", "internet hizmetleri", "iletişim çözümleri"]
+    confidence_threshold: 0.8
+    
+  software_technology:
+    name: "Yazılım ve Teknoloji"
+    description: "Yazılım geliştirme, teknoloji çözümleri ve dijital hizmetler"
+    keywords: ["yazılım", "teknoloji", "programlama", "kod", "uygulama", "sistem", "veritabanı", "api", "cloud", "siber güvenlik", "yapay zeka", "makine öğrenmesi"]
+    adapter_path: "adapters/software_technology_adapter"
+    priority: 19
+    expertise_domains: ["yazılım geliştirme", "sistem mimarisi", "veri analizi", "siber güvenlik", "bulut teknolojileri"]
+    confidence_threshold: 0.85
+    
+  consulting_services:
+    name: "Danışmanlık Hizmetleri"
+    description: "İş danışmanlığı, strateji ve operasyonel danışmanlık"
+    keywords: ["danışmanlık", "strateji", "operasyon", "iş danışmanlığı", "yönetim", "organizasyon", "süreç", "değişim yönetimi", "verimlilik", "optimizasyon"]
+    adapter_path: "adapters/consulting_services_adapter"
+    priority: 20
+    expertise_domains: ["strateji geliştirme", "süreç iyileştirme", "değişim yönetimi", "organizasyonel gelişim", "verimlilik artırma"]
+    confidence_threshold: 0.8
+    
+  research_development:
+    name: "Araştırma ve Geliştirme"
+    description: "Bilimsel araştırma, teknoloji geliştirme ve inovasyon"
+    keywords: ["araştırma", "geliştirme", "inovasyon", "teknoloji", "bilim", "laboratuvar", "deney", "patent", "buluş", "keşif", "bilimsel araştırma", "Ar-Ge"]
+    adapter_path: "adapters/research_development_adapter"
+    priority: 21
+    expertise_domains: ["bilimsel araştırma", "teknoloji transferi", "patent yönetimi", "laboratuvar güvenliği", "araştırma etiği"]
+    confidence_threshold: 0.85
+    
+  environmental_services:
+    name: "Çevre Hizmetleri"
+    description: "Çevre koruma, atık yönetimi ve sürdürülebilirlik"
+    keywords: ["çevre", "sürdürülebilirlik", "atık", "geri dönüşüm", "kirlilik", "iklim", "yeşil", "ekoloji", "çevre koruma", "doğa", "çevre yönetimi"]
+    adapter_path: "adapters/environmental_services_adapter"
+    priority: 22
+    expertise_domains: ["atık yönetimi", "çevre etki değerlendirmesi", "sürdürülebilirlik raporlama", "iklim adaptasyonu", "yeşil teknolojiler"]
+    confidence_threshold: 0.8
+
+# Router yapılandırması
+router:
+  default_adapter: "adapters/general_adapter"
+  fallback_threshold: 0.6
+  max_experts_per_token: 3
+  load_balancing: "performance_weighted"  # "round_robin" veya "performance_weighted"
+  enable_moe: true
+  expert_selection_strategy: "confidence_weighted"  # "confidence_weighted" veya "load_balanced"
+
+# Sistem yapılandırması
+system:
+  max_concurrent_requests: 100
+  request_timeout_seconds: 30
+  enable_caching: true
+  cache_ttl_seconds: 300
+  enable_metrics: true
+  metrics_export_interval: 60

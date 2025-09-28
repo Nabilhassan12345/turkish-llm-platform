@@ -1,0 +1,88 @@
+name: Turkish LLM Demo CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements_demo.txt
+        pip install flake8 black
+        
+    - name: Run flake8
+      run: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=88 --statistics
+        
+    - name: Run black check
+      run: |
+        black --check --diff .
+        
+    - name: Check for secrets
+      run: |
+        grep -r --include="*.py" --include="*.sh" --include="*.yml" --include="*.yaml" --include="*.json" \
+          -E "(api_key|apikey|secret|password|token|credential|auth)" . || echo "No potential secrets found"
+        if grep -r --include="*.py" --include="*.sh" --include="*.yml" --include="*.yaml" --include="*.json" \
+          -E "(api_key|apikey|secret|password|token|credential|auth)" .; then
+          echo "Potential secrets found in the codebase. Please review."
+          exit 1
+        fi
+
+  smoke_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements_demo.txt
+        
+    - name: Create demo model directory
+      run: |
+        mkdir -p demo_models/healthcare-small
+        echo "# Demo placeholder" > demo_models/healthcare-small/DEMO_PLACEHOLDER_README.txt
+        
+    - name: Run smoke test
+      run: |
+        python real_demo.py --smoke-test
+
+  docker_build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      
+    - name: Build Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./Dockerfile.demo
+        push: false
+        tags: turkish-llm-demo:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
