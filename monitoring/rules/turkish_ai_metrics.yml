@@ -1,0 +1,66 @@
+groups:
+  - name: turkish_ai_metrics
+    rules:
+      # Request rate per sector
+      - record: turkish_ai:requests_per_sector_rate
+        expr: rate(turkish_ai_requests_total[5m])
+        
+      # Error rate per sector
+      - record: turkish_ai:errors_per_sector_rate
+        expr: rate(turkish_ai_errors_total[5m])
+        
+      # Success rate per sector
+      - record: turkish_ai:success_rate_per_sector
+        expr: (turkish_ai_requests_total - turkish_ai_errors_total) / turkish_ai_requests_total
+        
+      # Average response time per sector
+      - record: turkish_ai:avg_response_time_per_sector
+        expr: turkish_ai_response_time_sum / turkish_ai_response_time_count
+        
+      # 95th percentile response time
+      - record: turkish_ai:response_time_95th_percentile
+        expr: histogram_quantile(0.95, sum(rate(turkish_ai_response_time_bucket[5m])) by (le, sector))
+        
+      # 99th percentile response time
+      - record: turkish_ai:response_time_99th_percentile
+        expr: histogram_quantile(0.99, sum(rate(turkish_ai_response_time_bucket[5m])) by (le, sector))
+        
+      # Throughput (requests per second)
+      - record: turkish_ai:throughput_rps
+        expr: sum(rate(turkish_ai_requests_total[1m])) by (sector)
+        
+      # GPU utilization
+      - record: turkish_ai:gpu_utilization_avg
+        expr: avg_over_time(turkish_ai_gpu_utilization[5m])
+        
+      # Memory usage
+      - record: turkish_ai:memory_usage_avg
+        expr: avg_over_time(turkish_ai_memory_usage_bytes[5m])
+        
+      # Active WebSocket connections
+      - record: turkish_ai:websocket_connections_active
+        expr: turkish_ai_websocket_connections_total
+        
+      # Audio processing metrics
+      - record: turkish_ai:audio_processing_duration_avg
+        expr: turkish_ai_audio_processing_duration_sum / turkish_ai_audio_processing_duration_count
+        
+      # STT accuracy
+      - record: turkish_ai:stt_accuracy_avg
+        expr: avg_over_time(turkish_ai_stt_accuracy[5m])
+        
+      # TTS quality score
+      - record: turkish_ai:tts_quality_score_avg
+        expr: avg_over_time(turkish_ai_tts_quality_score[5m])
+        
+      # Adapter performance metrics
+      - record: turkish_ai:adapter_accuracy_avg
+        expr: avg_over_time(turkish_ai_adapter_accuracy[5m])
+        
+      # Router performance
+      - record: turkish_ai:router_accuracy_avg
+        expr: avg_over_time(turkish_ai_router_accuracy[5m])
+        
+      # Cost per request (if applicable)
+      - record: turkish_ai:cost_per_request_avg
+        expr: turkish_ai_cost_sum / turkish_ai_requests_total

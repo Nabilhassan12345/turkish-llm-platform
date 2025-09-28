@@ -1,0 +1,22 @@
+# Turkish LLM Demo Output
+
+## API Server Startup
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+
+## Sample Request
+curl -X POST "http://localhost:8000/infer" -H "Content-Type: application/json" -d '{"text": "Aile hekimimi nasıl değiştirebilirim?", "sector": "healthcare"}'
+
+## Sample Response
+{
+  "response": "Aile hekiminizi değiştirmek için MHRS üzerinden veya e-Nabız uygulamasından işlem yapabilirsiniz.",
+  "model_used": "healthcare-small",
+  "processing_time_ms": 45.23,
+  "sector": "healthcare"
+}
+
+## Health Check
+curl http://localhost:8000/health
+{"status":"ok","service":"Turkish LLM Demo API"}

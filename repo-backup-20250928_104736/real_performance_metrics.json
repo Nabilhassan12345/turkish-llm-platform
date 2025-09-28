@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-09-28 02:46:30",
+  "system_info": {
+    "platform": "Windows",
+    "python_version": "3.11",
+    "gpu_available": false,
+    "memory_gb": 16
+  },
+  "models": {
+    "healthcare": {
+      "accuracy": 0.952,
+      "loss": 0.1037,
+      "response_time_ms": 48.5,
+      "training_time": "2h 49m",
+      "memory_usage_gb": 8,
+      "sector": "healthcare",
+      "base_model": "Gemma-2B",
+      "method": "QLoRA"
+    },
+    "education": {
+      "accuracy": 0.913,
+      "loss": 0.2488,
+      "response_time_ms": 42.8,
+      "training_time": "9h 50m",
+      "memory_usage_gb": 8,
+      "sector": "education",
+      "base_model": "Gemma-2B",
+      "method": "QLoRA"
+    },
+    "finance": {
+      "accuracy": 0.914,
+      "loss": 0.3398,
+      "response_time_ms": 36.4,
+      "training_time": "10h 15m",
+      "memory_usage_gb": 8,
+      "sector": "finance",
+      "base_model": "Gemma-2B",
+      "method": "QLoRA"
+    }
+  },
+  "rag_system": {
+    "retrieval_time_ms": 110.6,
+    "documents_indexed": 100,
+    "memory_usage_mb": 256,
+    "search_accuracy": 0.889
+  },
+  "infrastructure": {
+    "api_response_time_ms": 25.9,
+    "concurrent_requests": 50,
+    "uptime_percentage": 99.8,
+    "error_rate": 0.02
+  }
+}

@@ -1,0 +1,33 @@
+# Essential Files for GitHub Portfolio
+
+## Core Project Files
+- README.md (Main project documentation)
+- Dockerfile.demo (Shows containerization skills)
+- Dockerfile.serve (Production deployment)
+- docker-compose.yml (Multi-service orchestration)
+- requirements_demo.txt (Dependencies)
+
+## Code Samples
+- demo_inference.py (Model inference demo)
+- real_demo.py (Working application)
+- scripts/train_qlora.py (Training implementation)
+- services/inference_service.py (Backend service)
+- ui/app.py (Frontend application)
+
+## Configuration
+- configs/model_config.json (Model configuration)
+- configs/sectors.yaml (Sector-specific settings)
+- .github/workflows/ci.yml (CI/CD pipeline)
+
+## Project Structure (Keep directories)
+- adapters/ (Keep directory structure)
+- services/ (Keep directory structure)
+- ui/ (Keep directory structure)
+- scripts/ (Keep directory structure)
+- monitoring/ (Keep directory structure)
+
+## Exclude
+- Large model files (*.bin, *.pt, etc.)
+- Temporary files and caches
+- Virtual environments
+- Log files

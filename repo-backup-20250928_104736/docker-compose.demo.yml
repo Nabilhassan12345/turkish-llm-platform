@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Demo API Service
+  demo-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.demo
+    container_name: turkish-llm-demo
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - MODEL_PATH=/app/demo_models/healthcare-small
+    volumes:
+      - ./configs:/app/configs:ro
+      - ./demo_models:/app/demo_models:ro
+      - ./logs:/app/logs
+    networks:
+      - turkish-llm-demo-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  turkish-llm-demo-network:
+    driver: bridge

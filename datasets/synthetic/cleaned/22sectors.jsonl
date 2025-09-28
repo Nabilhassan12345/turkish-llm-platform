@@ -1,0 +1,5 @@
+{"sector": "finans", "text": "Kredi kartý borcumu yapýlandýrmak istiyorum. Hangi adýmlarý izlemeliyim?", "response": "Kredi kartý borcunuzu yapýlandýrmak için bankanýzýn müþteri hizmetlerini aramalý veya internet bankacýlýðý üzerinden baþvuru yapmalýsýnýz.", "metadata": {"source": "synthetic", "difficulty": "basic"}}
+
+{"sector": "saglik", "text": "Aile hekimimi nasýl deðiþtirebilirim?", "response": "Aile hekiminizi deðiþtirmek için MHRS üzerinden veya e-Nabýz uygulamasýndan iþlem yapabilirsiniz.", "metadata": {"source": "synthetic", "difficulty": "basic"}}
+
+{"sector": "egitim", "text": "Üniversite baþvurusu için hangi belgeler gerekli?", "response": "Üniversite baþvurusu için YKS sonuç belgesi, lise diplomasý ve nüfus cüzdaný fotokopisi gereklidir.", "metadata": {"source": "synthetic", "difficulty": "basic"}}

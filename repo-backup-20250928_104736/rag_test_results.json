@@ -1,0 +1,33 @@
+[
+  {
+    "query": "kredi",
+    "results": [
+      {
+        "text": "Kredi kart borcumu yaplandrmak istiyorum. Hangi admlar izlemeliyim?",
+        "response": "Kredi kart borcunuzu yaplandrmak iin bankanzn mteri hizmetlerini aramal veya internet bankacl zerinden bavuru yapmalsnz.",
+        "score": 1,
+        "metadata": {
+          "source": "pilot",
+          "difficulty": "basic"
+        }
+      },
+      {
+        "text": "Kredi kart borcumu yaplandrmak istiyorum. Hangi admlar izlemeliyim?",
+        "response": "Kredi kart borcunuzu yaplandrmak iin bankanzn mteri hizmetlerini aramal veya internet bankacl zerinden bavuru yapmalsnz.",
+        "score": 1,
+        "metadata": {
+          "source": "pilot",
+          "difficulty": "basic"
+        }
+      }
+    ]
+  },
+  {
+    "query": "hekim",
+    "results": []
+  },
+  {
+    "query": "Ã¼niversite",
+    "results": []
+  }
+]
