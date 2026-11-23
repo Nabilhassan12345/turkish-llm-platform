@@ -18,6 +18,8 @@
 
 ---
 
+![Streamlit test UI: chat, generation settings and sector test buttons (screenshot taken without the inference service running)](docs/images/streamlit-ui.png)
+
 ## 🚀 Project Overview
 
 **Turkish AI Agent** is a Turkish-language AI platform for business sectors: QLoRA-tuned Gemma-2B adapters, RAG and a FastAPI + React app.
