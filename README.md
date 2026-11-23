@@ -1,4 +1,4 @@
-# 🇹🇷 Turkish AI Agent: Enterprise-Grade AI Platform
+# 🇹🇷 Turkish LLM Platform: QLoRA fine-tuning + RAG for Turkish
 
 <div align="center">
 
@@ -11,7 +11,6 @@
 [![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-2088ff?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![CPU Friendly](https://img.shields.io/badge/CPU-Friendly-28a745?style=for-the-badge&logo=cpu&logoColor=white)](#demo--portfolio-showcase)
 
-**⭐ If you find this project useful, consider giving it a star on GitHub — it helps showcase my work to recruiters and collaborators!**
 
 [🚀 Quick Start](#-demo--portfolio-showcase) • [🎯 Achievements](#-key-technical-achievements) • [🖼️ Visuals](#-visual-enhancements) • [📞 Contact](#-contact--portfolio)
 
@@ -21,11 +20,11 @@
 
 ## 🚀 Project Overview
 
-**Turkish AI Agent** is an enterprise-grade AI platform tailored for Turkish business sectors, combining advanced AI/ML engineering, full-stack development, and production-ready infrastructure.
+**Turkish AI Agent** is a Turkish-language AI platform for business sectors: QLoRA-tuned Gemma-2B adapters, RAG and a FastAPI + React app.
 
 ### 💼 Portfolio-Ready Showcase
 
-Designed specifically for **recruiters and technical showcases**. The demo runs fully on **8GB VRAM (RTX 4060)** or **CPU-only mode**, making it accessible to anyone who wants to evaluate the technical capabilities.
+The demo runs fully on **8GB VRAM (RTX 4060)** or **CPU-only mode**, making it accessible to anyone who wants to evaluate the technical capabilities.
 
 ### ✨ Core Features
 
